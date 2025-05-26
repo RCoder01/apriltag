@@ -986,7 +986,7 @@ static void do_unionfind_first_line(unionfind_t *uf, image_u8_t *im, int w, int 
     int y = 0;
     uint8_t v;
 
-    for (int x = 1; x < w - 1; x++) {
+    for (int x = 1; x < w; x++) {
         v = im->buf[y*s + x];
 
         if (v == 127)
@@ -1006,7 +1006,7 @@ static void do_unionfind_line2(unionfind_t *uf, image_u8_t *im, int w, int s, in
     uint8_t v_m1_0;
     uint8_t v = im->buf[y*s];
 
-    for (int x = 1; x < w - 1; x++) {
+    for (int x = 1; x < w; x++) {
         v_m1_m1 = v_0_m1;
         v_0_m1 = v_1_m1;
         v_1_m1 = im->buf[(y - 1)*s + x + 1];
